@@ -2,10 +2,9 @@
 
 //args.foreach(println)
 
-for(arg <- args) {
-    arg = "blah"
-    println arg
-}
+//for(arg <- args) {
+//    println(arg)
+//}
 
 
 /*
@@ -18,4 +17,6 @@ while(i < args.length) {
 } 
 println()
 */
-
+//
+//val big = new java.math.BigInteger("12345")
+//println(big)
