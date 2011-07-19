@@ -1,0 +1,5 @@
+/home/tvaughan/dev/scala-2.8.0.final/lib/jline.jar:/home/tvaughan/dev/scala-2.8.0.final/lib/scala-compiler.jar:/home/tvaughan/dev/scala-2.8.0.final/lib/scala-dbc.jar:/home/tvaughan/dev/scala-2.8.0.final/lib/scala-library.jar:/home/tvaughan/dev/scala-2.8.0.final/lib/scala-swing.jar:/home/tvaughan/dev/scala-2.8.0.final/lib/scalap.jar:/home/tvaughan/NetBeansProjects/ScalaApplication1/build/classes
+-------
+-------
+../src/scalaapplication1/Main.scala -> classes/scalaapplication1/Main.class
+../src/scalaapplication1/Main.scala -> classes/scalaapplication1/Main$.class
