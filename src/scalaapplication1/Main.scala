@@ -17,13 +17,9 @@ object Main {
    */
   def main(args: Array[String]): Unit = {
     for(i <- (0).to(2)) 
-      print(greetStrings(i))
+      print(greetStrings.apply(i))
+    
+    val three = (1).+(2)
+    println(three)
   }
-  
-  // doesn't work because there isn't a receiver of the method call:
-  // println 10
-  
-  // but this does work:
-  Console println 10
-  
 }
