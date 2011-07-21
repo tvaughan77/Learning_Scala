@@ -20,5 +20,9 @@ object Main {
     println("" + oneTwo + " and " + threeFour + " were not mutated.")
     println("Thus, " + oneTwoThreeFour + " is a new list.")
   
+    // cons operator works on the right hand side because the operator ends in ":"
+    val myList = List(1, 2)
+    val consdList = 3 :: myList
+    println("ConsdList is " + consdList)
   }
 }
