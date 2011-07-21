@@ -40,6 +40,9 @@ object Main {
       val tupleA = (1).->("Blah")
       println("tuple A is " + tupleA)
       
+      treasureMap.+=((4).->("Bar"), (5).->("Baz"))
+      println("Here's my treasureMap now " + treasureMap)
+      
     }
     
     def playWithImmutableSets() {
