@@ -10,7 +10,7 @@ object Main {
   def main(args: Array[String]): Unit = {
 //    greetStrings.foreach(print)
   
-    val foo = new Foo
+//    val foo = new Foo
 //    foo.playWithLists
     
 //    foo.playWithTuples
@@ -20,7 +20,12 @@ object Main {
     
 //    foo.playWithMutableMaps
 
-    foo.playWithImmutableMaps
+//    foo.playWithImmutableMaps
+    
+    val args = Array("test/foo.txt")
+    val cc = new CountChars
+    val lines = cc.imperativeCountLines(args)
+    println("Number of lines in " + args.mkString(" ") + " is " + lines)
     
     
   }
