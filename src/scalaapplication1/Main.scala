@@ -1,6 +1,6 @@
 package scalaapplication1
 
-import scalaapplication1.ch04.ChecksumAccumulator
+//import scalaapplication1.ch04.ChecksumAccumulator
 
 object Main {
 
@@ -9,7 +9,12 @@ object Main {
    * @param args the command line arguments
    */
   def main(args: Array[String]): Unit = {
-    /* Chapter 4 */
+    /* Chapter 5 */
+    // Byte, Short, Int, Long, Char are Integral types.  With Float and Double, that's Numeric types.
+    println("""|Welcome to Ultamix 3000
+               |Type "Help for help.""".stripMargin)
+    
+    /* Chapter 4 
     val acc = new ChecksumAccumulator
     val csa = new ChecksumAccumulator
 
@@ -19,7 +24,8 @@ object Main {
     
     val myString = acc.h
     println("Calling calculate on acc.h is " + ChecksumAccumulator.calculate(myString))
-  
+    */
+   
     /* Chapter 2-3
     val foo = new Foo
     foo.playWithLists
