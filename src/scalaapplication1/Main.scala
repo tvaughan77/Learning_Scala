@@ -8,15 +8,25 @@ object Main {
    * @param args the command line arguments
    */
   def main(args: Array[String]): Unit = {
-    greetStrings.foreach(print)
+//    greetStrings.foreach(print)
   
     val foo = new Foo
-    foo.playWithLists
- 
+//    foo.playWithLists
+    
+    foo.playWithTuples
+
+    
     
   }
   
   class Foo {
+    
+    def playWithTuples() {
+      val pair = (99, "Luftbaloons")
+      println("the pair._1 value is " + pair._1)
+      println("the pair._2 value is " + pair._2)
+    }
+    
     def playWithLists() {
       // This is a scala.List and it is immutable
       val oneTwoThree = List(1, 2, 3)
