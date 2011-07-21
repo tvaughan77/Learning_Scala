@@ -15,6 +15,7 @@ object Main {
 
     println("result of calling acc.f is = " + acc.f)
     println("result of calling acc.g is = " + acc.g)
+    println("result of calling acc.h is = " + acc.h)
   
     /* Chapter 2-3
     val foo = new Foo

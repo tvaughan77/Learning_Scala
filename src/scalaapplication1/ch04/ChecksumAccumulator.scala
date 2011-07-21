@@ -12,4 +12,6 @@ class ChecksumAccumulator {
   def f() : Unit = "this string gets lost because Scala turns the string to declared Unit return type"
   
   def g() {"this string gets lost too because the method-style automatically assumes Unit"}
+  
+  def h() = {"the equals sign defines a method whose return type can be inferred. This string is preserved"}
 }
