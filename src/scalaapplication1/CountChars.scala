@@ -12,26 +12,28 @@ class CountChars {
       // Here's an imperative way of finding the max width of any line
       var maxWidth = 0
       for(line <- listOfLines) 
-        maxWidth = maxWidth.max(widthOfLine(line))
+        maxWidth = maxWidth.max(widthOfLength(line))
       println("Finding maxWidth in an iterative way yields = " + maxWidth)
       
       // Here's a mappy way of doing the same thing
       val maxLine = listOfLines.reduceLeft(
         (a, b) => if (a.length > b.length) a else b
       )
-      maxWidth = maxLine.length
+      maxWidth = widthOfLength(maxLine)
       println("Finding maxWidth in a mappy way yields = " + maxWidth)
         
       
-      for(line <- Source.fromFile(args(0)).getLines) {
-        print(line.length + " " + line + "\n")
+      for(line <- listOfLines) {
+        val numSpaces = maxWidth - widthOfLength(line)
+        val padding = " " * numSpaces
+        print(padding + line.length + " | " + line + "\n")
         lines += 1
       }
     }
     lines
   }
   
-  def widthOfLine(line : String) : Int = {
-    line.length
+  def widthOfLength(line : String) : Int = {
+    line.length.toString.length
   }
 }

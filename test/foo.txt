@@ -2,4 +2,5 @@ one
 two
 three
 four
+here is a line that has more than 9 characters and, therefore a widthOfLength > 1
 five
