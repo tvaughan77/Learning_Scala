@@ -18,16 +18,27 @@ object Main {
 //    foo.playWithImmutableSets
 //    foo.playWithMutableSets
     
-    foo.playWithMutableMaps
+//    foo.playWithMutableMaps
 
+    foo.playWithImmutableMaps
     
     
   }
   
   class Foo {
     
+    def playWithImmutableMaps() {
+      // no need to fully qualify the object as immutable Maps are the default
+      var romanNumeral = Map(1->"I", 2->"II", 3->"III", 4->"IV", 5->"V")
+      println(romanNumeral(4))
+      
+      val someOtherMap = Map(1->"A", 2->"B")
+      // immutable doesn't mean non-re-assignable, it just means that modifiers return new Maps leaving the original alone
+      romanNumeral = someOtherMap
+    }
+    
     def playWithMutableMaps() {
-      val treasureMap = scala.collection.mutable.Map[Int, String]()
+      var treasureMap = scala.collection.mutable.Map[Int, String]()
       treasureMap += (1 -> "Go to island")
       treasureMap += (2 -> "Find big X on ground")
       treasureMap += (3 -> "Dig")
@@ -42,7 +53,6 @@ object Main {
       
       treasureMap.+=((4).->("Bar"), (5).->("Baz"))
       println("Here's my treasureMap now " + treasureMap)
-      
     }
     
     def playWithImmutableSets() {
