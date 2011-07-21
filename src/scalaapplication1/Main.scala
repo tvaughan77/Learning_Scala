@@ -23,6 +23,15 @@ object Main {
     val zero = 2 + (2).unary_-;
     assert(zero == 0, "I was expecting 2 - 2 to be 0")
     
+    // Scala provides a facility for comparing reference equality under the name "eq", however eq (and its opposite ne) only
+    // apply to objects that directly map to Java objects
+    val areEqual = (List(1, 2, 3) == List(1, 2, 3))
+    println("Are two separate list constructors with the same values equal? " + areEqual)
+    
+    println("1 == 1.0 .... is equal? ... " + 1 == 1.0)
+    
+    
+    
     /* Chapter 4 
     val acc = new ChecksumAccumulator
     val csa = new ChecksumAccumulator
