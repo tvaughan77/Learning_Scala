@@ -1,6 +1,7 @@
 package scalaapplication1
 
 //import scalaapplication1.ch04.ChecksumAccumulator
+import scalaapplication1.ch05.BasicTypesAndOperations
 
 object Main {
 
@@ -11,25 +12,9 @@ object Main {
    */
   def main(args: Array[String]): Unit = {
     /* Chapter 5 */
-    // Byte, Short, Int, Long, Char are Integral types.  With Float and Double, that's Numeric types.
-    println("""|Welcome to Ultamix 3000
-               |Type "Help" for help.""".stripMargin)
-    
-    val string = "Hello, world"
-    print("An example of using a method as an operator: ")
-    println(string indexOf 'o')
-    
-    // possible unary operators: {+, -, !, ~}
-    val zero = 2 + (2).unary_-;
-    assert(zero == 0, "I was expecting 2 - 2 to be 0")
-    
-    // Scala provides a facility for comparing reference equality under the name "eq", however eq (and its opposite ne) only
-    // apply to objects that directly map to Java objects
-    val areEqual = (List(1, 2, 3) == List(1, 2, 3))
-    println("Are two separate list constructors with the same values equal? " + areEqual)
-    
-    println("1 == 1.0 .... is equal? ... " + 1 == 1.0)
-    
+    val ch5 = new BasicTypesAndOperations
+    ch5.chapter5scratchpad
+    ch5.playWithRichWrappers
     
     
     /* Chapter 4 
