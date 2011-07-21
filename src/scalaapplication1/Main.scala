@@ -5,6 +5,7 @@ package scalaapplication1
 object Main {
 
   
+  
   /**
    * @param args the command line arguments
    */
@@ -12,7 +13,14 @@ object Main {
     /* Chapter 5 */
     // Byte, Short, Int, Long, Char are Integral types.  With Float and Double, that's Numeric types.
     println("""|Welcome to Ultamix 3000
-               |Type "Help for help.""".stripMargin)
+               |Type "Help" for help.""".stripMargin)
+    
+    val string = "Hello, world"
+    print("An example of using a method as an operator: ")
+    println(string indexOf 'o')
+    
+    val zero = 2 + (2).unary_-;
+    assert(zero == 0, "I was expecting 2 - 2 to be 0")
     
     /* Chapter 4 
     val acc = new ChecksumAccumulator
