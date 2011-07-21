@@ -13,13 +13,48 @@ object Main {
     val foo = new Foo
 //    foo.playWithLists
     
-    foo.playWithTuples
+//    foo.playWithTuples
+    
+//    foo.playWithImmutableSets
+//    foo.playWithMutableSets
+    
+    foo.playWithMutableMaps
 
     
     
   }
   
   class Foo {
+    
+    def playWithMutableMaps() {
+      val treasureMap = scala.collection.mutable.Map[Int, String]()
+      treasureMap += (1 -> "Go to island")
+      treasureMap += (2 -> "Find big X on ground")
+      treasureMap += (3 -> "Dig")
+      
+      println("The entire treasureMap is " + treasureMap)
+      treasureMap(2) = "foo"
+      println("treasureMap(2) is " + treasureMap(2))
+      
+      // interesting....you can invoke the "->" operator on any object in scala to make a tuple
+      val tupleA = (1).->("Blah")
+      println("tuple A is " + tupleA)
+      
+    }
+    
+    def playWithImmutableSets() {
+      var jetSet = scala.collection.immutable.Set("Boeing", "Airbus")
+      // this is shorthand for jetSet = jetSet + "Lear", which is how this object can be called "immutable"
+      jetSet += "Lear"                       
+      println(jetSet.contains("Cessna"))
+      println("Contents of jetSet are " + jetSet)
+    }
+    
+    def playWithMutableSets() {
+      val movieSet = scala.collection.mutable.Set("Hitch", "Poltergeist")
+      movieSet += "Shrek"
+      println("Contents of movieSet are " + movieSet)
+    }
     
     def playWithTuples() {
       val pair = (99, "Luftbaloons")
