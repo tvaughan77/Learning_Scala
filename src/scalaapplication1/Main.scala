@@ -2,6 +2,12 @@ package scalaapplication1
 
 import scalaapplication1.ch04.ChecksumAccumulator
 
+/**
+ * Short comins of extending Application:
+ * 1) can't access command line arguments
+ * 2) must use an explicit Main method if the program is multi-threaded
+ * 3) some implements of the JVM do not optimize the initialization code of an object which is executed by the Application trait
+ */
 object Main extends Application{
     /* Chapter 4 */
     val acc = new ChecksumAccumulator
