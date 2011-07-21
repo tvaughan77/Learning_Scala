@@ -224,6 +224,7 @@ is divided into following sections:
         </macrodef>
     </target>
     <target name="-init-macrodef-scalac">
+        <echoproperties/>
         <macrodef name="scalac" uri="http://www.netbeans.org/ns/scala-project/1">
             <attribute default="${src.dir}" name="srcdir"/>
             <attribute default="${build.classes.dir}" name="destdir"/>
