@@ -12,7 +12,10 @@ object Main {
     /* Chapter 4 */
     val acc = new ChecksumAccumulator
     val csa = new ChecksumAccumulator
-    
+
+    println("result of calling acc.f is = " + acc.f)
+    println("result of calling acc.g is = " + acc.g)
+  
     /* Chapter 2-3
     val foo = new Foo
     foo.playWithLists
