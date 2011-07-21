@@ -7,11 +7,31 @@ class CountChars {
   def imperativeCountLines(args: Array[String]) : Int = {
     var lines = 0
     if(args.length > 0) {
+      val listOfLines = Source.fromFile(args(0)).getLines.toList
+      
+      // Here's an imperative way of finding the max width of any line
+      var maxWidth = 0
+      for(line <- listOfLines) 
+        maxWidth = maxWidth.max(widthOfLine(line))
+      println("Finding maxWidth in an iterative way yields = " + maxWidth)
+      
+      // Here's a mappy way of doing the same thing
+      val maxLine = listOfLines.reduceLeft(
+        (a, b) => if (a.length > b.length) a else b
+      )
+      maxWidth = maxLine.length
+      println("Finding maxWidth in a mappy way yields = " + maxWidth)
+        
+      
       for(line <- Source.fromFile(args(0)).getLines) {
         print(line.length + " " + line + "\n")
         lines += 1
       }
     }
-    return lines
+    lines
+  }
+  
+  def widthOfLine(line : String) : Int = {
+    line.length
   }
 }
