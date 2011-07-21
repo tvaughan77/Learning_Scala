@@ -19,6 +19,7 @@ object Main {
     print("An example of using a method as an operator: ")
     println(string indexOf 'o')
     
+    // possible unary operators: {+, -, !, ~}
     val zero = 2 + (2).unary_-;
     assert(zero == 0, "I was expecting 2 - 2 to be 0")
     
