@@ -12,8 +12,6 @@ object Main {
     /* Chapter 4 */
     val acc = new ChecksumAccumulator
     val csa = new ChecksumAccumulator
-    acc.sum = 3
-    println("Value of acc.sum is = " + acc.sum + " while csa.sum is = " + csa.sum)
     
     /* Chapter 2-3
     val foo = new Foo

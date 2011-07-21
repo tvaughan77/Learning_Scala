@@ -2,5 +2,6 @@ package scalaapplication1.ch04
 
 class ChecksumAccumulator {
 
-  var sum = 0
+  // with no modifier, Scala defaults to public
+  private var sum = 0
 }
