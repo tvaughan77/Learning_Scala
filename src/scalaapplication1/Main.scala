@@ -2,7 +2,13 @@ package scalaapplication1
 
 import scalaapplication1.ch04.ChecksumAccumulator
 
-object Main extends Application{
+object Main {
+
+  
+  /**
+   * @param args the command line arguments
+   */
+  def main(args: Array[String]): Unit = {
     /* Chapter 4 */
     val acc = new ChecksumAccumulator
     val csa = new ChecksumAccumulator
@@ -13,7 +19,6 @@ object Main extends Application{
     
     val myString = acc.h
     println("Calling calculate on acc.h is " + ChecksumAccumulator.calculate(myString))
-  
   
     /* Chapter 2-3
     val foo = new Foo
@@ -35,4 +40,7 @@ object Main extends Application{
       val greetStrings = Array("Hello", ", ", "World!")
       greetStrings.foreach(print)
       */
+  }
+  
+
 }
