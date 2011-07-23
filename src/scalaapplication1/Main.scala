@@ -17,6 +17,9 @@ object Main {
     val r = new Rational(3, 5)
     println("Just created r = " + r)
     
+    val badRational = new Rational(4, 0)
+    println("should not have gotten here")
+    
     /* Chapter 5 
     val ch5 = new BasicTypesAndOperations
     ch5.chapter5scratchpad
