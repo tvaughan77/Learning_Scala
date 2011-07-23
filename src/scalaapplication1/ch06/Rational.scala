@@ -5,5 +5,8 @@ package scalaapplication1.ch06
  */
 class Rational(n: Int, d: Int) {
   // anything that isn't part of a field or method definition gets placed in the primary constructor, like this:
-  println("Created " + n + "/" + d)
+//  println("Created " + n + "/" + d)
+
+    override def toString = n + "/" + d
+
 }
