@@ -6,8 +6,6 @@ import scalaapplication1.ch06.Rational
 
 object Main {
 
-  
-  
   /**
    * @param args the command line arguments
    */

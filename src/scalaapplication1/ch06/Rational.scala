@@ -14,6 +14,7 @@ class Rational(n: Int, d: Int) {
   
   def this(i: Int) = this(i, 1)  // auxillary constructor
   
+  
   def +(that: Rational) : Rational = {
     new Rational(
       (this.numer * that.denom + that.numer * this.denom),
@@ -98,5 +99,10 @@ object Rational {
     println(r + " - " + t + " = " + (r - t))
     println(r + " * " + t + " = " + (r * t))
     println(r + " / " + t + " = " + (r / t))
+    
+    // without an implicit conversion, this won't work because there is no Int.* method that takes one of my Rational classes
+    // as an argument
+    // I need to stick this line somewhere, but I'm not sure where yet: implicit def intToRational(i : Int) = new Rational(i)
+//    println(2 * r)
   }
 }
