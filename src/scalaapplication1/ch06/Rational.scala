@@ -12,7 +12,7 @@ class Rational(n: Int, d: Int) {
   val numer = n / g
   val denom = d / g
   
-  def this(n: Int) = this(n, 1)  // auxillary constructor
+  def this(i: Int) = this(i, 1)  // auxillary constructor
   
   def +(that: Rational) : Rational = {
     new Rational(
@@ -21,11 +21,42 @@ class Rational(n: Int, d: Int) {
     )
   }
   
+  def +(i: Int) : Rational = { 
+    new Rational((i * denom) + numer, denom)
+  }
+  
+  def -(that: Rational) : Rational = {
+    new Rational(
+      (this.numer * that.denom - that.numer * this.denom),
+      (this.denom * that.denom)
+    )
+  }
+  
+  def -(i: Int) : Rational = {
+    new Rational(numer - (i*denom), denom)
+  }
+  
   def *(that: Rational) : Rational = {
     new Rational(
       this.numer * that.numer,
       this.denom * that.denom
     )
+  }
+  
+  def *(i: Int) : Rational = {
+    new Rational(i * numer, denom)
+  }
+  
+  def /(that: Rational) : Rational = {
+    this.*(that.invert)
+  }
+  
+  def /(i: Int) : Rational = {
+    this./(new Rational(i))
+  }
+  
+  def invert() : Rational = {
+    new Rational(this.denom, this.numer)
   }
   
   override def toString = { 

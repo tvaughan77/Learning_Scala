@@ -19,6 +19,9 @@ object Main {
 
     val s = new Rational(4)
     println("Just created s = " + s)
+
+    val t = new Rational(1, 2)
+    println("Just created t = " + t)
     
     val rAndS = r + s
     println("r + s = " + rAndS)
@@ -31,10 +34,14 @@ object Main {
     
     println("r + (r * s) = " + (r + r * s))
     
-    // yield is a reserved word in scala, so you can't invoke it like this:
-//    Thread.yield()
-    // rather, you can name the method in back ticks which denotes a literal identifier
-    Thread.`yield`()
+    println(r + " + 1 = " + (r + 1))
+    println(r + " - 1 = " + (r - 1))
+    println(r + " * 2 = " + (r * 2))
+    println(r + " / 2 = " + (r / 2))
+    println(r + " + " + t + " = " + (r + t))
+    println(r + " - " + t + " = " + (r - t))
+    println(r + " * " + t + " = " + (r * t))
+    println(r + " / " + t + " = " + (r / t))
     
     
     /* Chapter 5 
