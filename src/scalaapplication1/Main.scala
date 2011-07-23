@@ -16,6 +16,7 @@ object Main {
     /* Chapter 6 */
     val r = new Rational(3, 5)
     
+    
     /* Chapter 5 
     val ch5 = new BasicTypesAndOperations
     ch5.chapter5scratchpad
