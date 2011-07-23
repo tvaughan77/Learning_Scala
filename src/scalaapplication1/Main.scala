@@ -16,9 +16,12 @@ object Main {
     /* Chapter 6 */
     val r = new Rational(3, 5)
     println("Just created r = " + r)
+
+    val s = new Rational(2, 3)
+    println("Just created s = " + s)
     
-    val badRational = new Rational(4, 0)
-    println("should not have gotten here")
+    val rAndS = r.add(s)
+    println("r + s = " + rAndS)
     
     /* Chapter 5 
     val ch5 = new BasicTypesAndOperations

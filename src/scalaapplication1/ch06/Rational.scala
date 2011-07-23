@@ -5,6 +5,16 @@ package scalaapplication1.ch06
  */
 class Rational(n: Int, d: Int) {
   require (d != 0)
-  override def toString = n + "/" + d
+  val numer = n
+  val denom = d
+  
+  def add(that: Rational) : Rational = {
+    new Rational(
+      (this.numer * that.denom + that.numer * this.denom),
+      (this.denom * that.denom)
+    )
+  }
+  
+  override def toString = numer + "/" + denom
 
 }
