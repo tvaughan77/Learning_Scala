@@ -17,7 +17,7 @@ object Main {
     val r = new Rational(3, 5)
     println("Just created r = " + r)
 
-    val s = new Rational(2, 3)
+    val s = new Rational(4)
     println("Just created s = " + s)
     
     val rAndS = r.add(s)
