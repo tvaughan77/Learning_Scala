@@ -23,6 +23,9 @@ object Main {
     val rAndS = r.add(s)
     println("r + s = " + rAndS)
     
+    val gcdTest = new Rational(66, 42)
+    println("gcdTest = " + gcdTest)
+    
     /* Chapter 5 
     val ch5 = new BasicTypesAndOperations
     ch5.chapter5scratchpad
