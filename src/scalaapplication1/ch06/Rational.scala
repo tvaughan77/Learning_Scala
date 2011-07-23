@@ -7,7 +7,8 @@ class Rational(n: Int, d: Int) {
   
   require (d != 0)
   
-  private val g = gcd(n, d)
+  // The initializers of these three fields are folded in to the primary constructor in the order they appear
+  private val g = gcd(n.abs, d.abs)
   val numer = n / g
   val denom = d / g
   
