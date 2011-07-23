@@ -1,7 +1,8 @@
 package scalaapplication1
 
 //import scalaapplication1.ch04.ChecksumAccumulator
-import scalaapplication1.ch05.BasicTypesAndOperations
+//import scalaapplication1.ch05.BasicTypesAndOperations
+import scalaapplication1.ch06.Rational
 
 object Main {
 
@@ -11,11 +12,15 @@ object Main {
    * @param args the command line arguments
    */
   def main(args: Array[String]): Unit = {
-    /* Chapter 5 */
+    
+    /* Chapter 6 */
+    val r = new Rational(3, 5)
+    
+    /* Chapter 5 
     val ch5 = new BasicTypesAndOperations
     ch5.chapter5scratchpad
     ch5.playWithRichWrappers
-    
+    */
     
     /* Chapter 4 
     val acc = new ChecksumAccumulator
