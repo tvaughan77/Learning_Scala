@@ -14,14 +14,23 @@ class Rational(n: Int, d: Int) {
   
   def this(n: Int) = this(n, 1)  // auxillary constructor
   
-  def add(that: Rational) : Rational = {
+  def +(that: Rational) : Rational = {
     new Rational(
       (this.numer * that.denom + that.numer * this.denom),
       (this.denom * that.denom)
     )
   }
   
-  override def toString = numer + "/" + denom
+  def *(that: Rational) : Rational = {
+    new Rational(
+      this.numer * that.numer,
+      this.denom * that.denom
+    )
+  }
+  
+  override def toString = { 
+    if(denom == 1) (numer  + "") else (numer + "/" + denom)
+  }
 
   private def gcd(a: Int, b: Int) : Int = {
     if(b == 0) a else gcd(b, a % b)

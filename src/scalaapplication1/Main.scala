@@ -20,11 +20,16 @@ object Main {
     val s = new Rational(4)
     println("Just created s = " + s)
     
-    val rAndS = r.add(s)
+    val rAndS = r + s
     println("r + s = " + rAndS)
     
     val gcdTest = new Rational(66, 42)
     println("gcdTest = " + gcdTest)
+    
+    val rTimesS = r * s
+    println("r times s = " + rTimesS)
+    
+    println("r + (r * s) = " + (r + r * s))
     
     /* Chapter 5 
     val ch5 = new BasicTypesAndOperations
