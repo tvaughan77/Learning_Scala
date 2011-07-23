@@ -14,34 +14,7 @@ object Main {
   def main(args: Array[String]): Unit = {
     
     /* Chapter 6 */
-    val r = new Rational(3, 5)
-    println("Just created r = " + r)
-
-    val s = new Rational(4)
-    println("Just created s = " + s)
-
-    val t = new Rational(1, 2)
-    println("Just created t = " + t)
-    
-    val rAndS = r + s
-    println("r + s = " + rAndS)
-    
-    val gcdTest = new Rational(66, 42)
-    println("gcdTest = " + gcdTest)
-    
-    val rTimesS = r * s
-    println("r times s = " + rTimesS)
-    
-    println("r + (r * s) = " + (r + r * s))
-    
-    println(r + " + 1 = " + (r + 1))
-    println(r + " - 1 = " + (r - 1))
-    println(r + " * 2 = " + (r * 2))
-    println(r + " / 2 = " + (r / 2))
-    println(r + " + " + t + " = " + (r + t))
-    println(r + " - " + t + " = " + (r - t))
-    println(r + " * " + t + " = " + (r * t))
-    println(r + " / " + t + " = " + (r / t))
+    Rational.playWithRationalNumbers
     
     
     /* Chapter 5 
