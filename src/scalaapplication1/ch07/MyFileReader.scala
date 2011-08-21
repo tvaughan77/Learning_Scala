@@ -6,6 +6,9 @@ import java.io.IOException
 
 object MyFileReader {
 
+  /**
+   * Instead of the try/use/finally lifecycle for resources, checkout the "loan pattern" in secion 9.4
+   */
   def readFile(filename : String) {
     try {
       val f = new FileReader(filename)
