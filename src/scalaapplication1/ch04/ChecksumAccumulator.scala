@@ -24,7 +24,7 @@ class ChecksumAccumulator {
  *  A class and companion object can access each others private members.
  *  Java programmers can think about companion objects as the place to store all the static methods you would write in Java, but
  * it's also first-class object.  Its type is defined by the singleton object's companion class...though singleton objects
- * exted a superclass and can mix in traits.
+ * extend a superclass and can mix in traits.
  * 
  *  Singleton objects cannot take parameters.  They're implemented as an instance of a synthetic class referenced from a static
  * variable, so they have the same initialization semantics as a Java statics.
