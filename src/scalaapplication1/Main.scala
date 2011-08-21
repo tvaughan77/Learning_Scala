@@ -2,7 +2,9 @@ package scalaapplication1
 
 //import scalaapplication1.ch04.ChecksumAccumulator
 //import scalaapplication1.ch05.BasicTypesAndOperations
-import scalaapplication1.ch06.Rational
+//import scalaapplication1.ch06.Rational
+
+import scalaapplication1.ch07.Control
 
 object Main {
 
@@ -11,9 +13,14 @@ object Main {
    */
   def main(args: Array[String]): Unit = {
     
-    /* Chapter 6 */
-    Rational.playWithRationalNumbers
+  
+    /* Chapter 7 */
+    Control.ifExample
+    Control.whileExample
     
+    /* Chapter 6 
+    Rational.playWithRationalNumbers
+    */
     
     /* Chapter 5 
     val ch5 = new BasicTypesAndOperations
