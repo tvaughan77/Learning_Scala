@@ -9,10 +9,11 @@ object MyFileReader {
   def readFile(filename : String) {
     try {
       val f = new FileReader(filename)
-      
     } catch {
       case ex: FileNotFoundException => println("File not found")
       case ex: IOException => println("IO Exception!")
+    } finally {
+      println("Inside a finally")
     }
   }
 }
