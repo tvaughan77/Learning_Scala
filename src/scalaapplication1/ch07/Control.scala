@@ -12,6 +12,10 @@ class Control {
     b
   }
   
+  def gcdRecursive(x: Long, y: Long): Long = {
+    if(y == 0) x else gcdRecursive(y, x % y)
+  }
+  
 }
 
 object Control {
@@ -34,8 +38,8 @@ object Control {
   
   def whileExample {
     val control = new Control
-    val gcd = control.gcdLoop(99, 22)
-    println("Greatest common denominator between 99 and 22 is " + gcd)
+    println("Using a big ugly loop, the greatest common denominator between 99 and 22 is " + control.gcdLoop(99, 22))
+    println("Using sweet ass recursion, the greatest common denominator of the same nums " + control.gcdRecursive(99, 22))
   }
   
   def doWhileExample() {
