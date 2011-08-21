@@ -25,6 +25,8 @@ object Main {
     Control.grep(".*gcd.*")
     */
     Control.grepWithMidStreamVariableBinding(".*gcd.*")
+    val counts = Control.yieldingForLoop
+    println("Counts from my yieldingForLoop is " + counts.mkString(" "))
     
     /* Chapter 6 
     Rational.playWithRationalNumbers

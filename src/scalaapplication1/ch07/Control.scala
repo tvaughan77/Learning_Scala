@@ -95,14 +95,25 @@ object Control {
    */
   def grepWithMidStreamVariableBinding(pattern: String) = {
     val filesHere = (new java.io.File("src/scalaapplication1/ch07")).listFiles
-    val control = new Control
     for(
       file <- filesHere
       if file.getName.endsWith(".scala");
-      line <- control.fileLines(file);
+      line <- (new Control).fileLines(file);
       trimmed = line.trim
       if trimmed.matches(pattern)
     ) println(file + ": " + trimmed)
+  }
+  
+  def yieldingForLoop() : Array[Int] = {
+    val filesHere = (new java.io.File("src/scalaapplication1/ch07")).listFiles
+    
+    for {
+      file <- filesHere
+      if file.getName.endsWith(".scala")
+      line <- (new Control).fileLines(file);
+      trimmed = line.trim
+      if trimmed.matches(".*for.*")
+    } yield trimmed.length
   }
 }
 
