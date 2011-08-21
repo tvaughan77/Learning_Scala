@@ -16,6 +16,9 @@ class Control {
     if(y == 0) x else gcdRecursive(y, x % y)
   }
   
+  def fileLines(file: java.io.File) = 
+    scala.io.Source.fromFile(file).getLines.toList
+  
 }
 
 object Control {
@@ -67,5 +70,39 @@ object Control {
       println("No upper bound Iteration " + i)
   }
   
+  def forLoopWithFilter() {
+    val filesHere = (new java.io.File("/tmp")).listFiles
+    for(
+      file <- filesHere
+      if file.isFile;                   // note the semicolon to chain filter-ifs
+      if file.getName.endsWith(".args")
+    ) println(file)
+  }
+  
+  def grep(pattern: String) = {
+    val filesHere = (new java.io.File("src/scalaapplication1/ch07")).listFiles
+
+    for(
+      file <- filesHere
+      if file.getName.endsWith(".scala");
+      line <- (new Control).fileLines(file)
+      if line.trim.matches(pattern)
+    ) println(file + ": " + line.trim)
+  }
+
+  /*
+   * Notice how the original "grep" method invokes line.trim twice...avoid that
+   */
+  def grepWithMidStreamVariableBinding(pattern: String) = {
+    val filesHere = (new java.io.File("src/scalaapplication1/ch07")).listFiles
+    val control = new Control
+    for(
+      file <- filesHere
+      if file.getName.endsWith(".scala");
+      line <- control.fileLines(file);
+      trimmed = line.trim
+      if trimmed.matches(pattern)
+    ) println(file + ": " + trimmed)
+  }
 }
 

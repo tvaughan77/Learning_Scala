@@ -19,9 +19,12 @@ object Main {
     Control.whileExample
     Control.doWhileExample
     Control.forLoopOverTmpExample
-    */
     Control.forLoopRangeExample
     Control.forLoopRangeNoUpperBoundExample
+    Control.forLoopWithFilter
+    Control.grep(".*gcd.*")
+    */
+    Control.grepWithMidStreamVariableBinding(".*gcd.*")
     
     /* Chapter 6 
     Rational.playWithRationalNumbers
