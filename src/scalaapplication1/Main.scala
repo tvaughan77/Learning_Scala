@@ -5,6 +5,7 @@ package scalaapplication1
 //import scalaapplication1.ch06.Rational
 
 import scalaapplication1.ch07.Control
+import scalaapplication1.ch07.MyFileReader
 
 object Main {
 
@@ -23,10 +24,12 @@ object Main {
     Control.forLoopRangeNoUpperBoundExample
     Control.forLoopWithFilter
     Control.grep(".*gcd.*")
-    */
     Control.grepWithMidStreamVariableBinding(".*gcd.*")
     val counts = Control.yieldingForLoop
     println("Counts from my yieldingForLoop is " + counts.mkString(" "))
+    */
+   val fr = MyFileReader.readFile("foobar.txt")
+   
     
     /* Chapter 6 
     Rational.playWithRationalNumbers
