@@ -17,6 +17,7 @@ object Main {
     /* Chapter 7 */
     Control.ifExample
     Control.whileExample
+    Control.doWhileExample
     
     /* Chapter 6 
     Rational.playWithRationalNumbers

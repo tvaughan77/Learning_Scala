@@ -11,6 +11,7 @@ class Control {
     }
     b
   }
+  
 }
 
 object Control {
@@ -35,9 +36,16 @@ object Control {
     val control = new Control
     val gcd = control.gcdLoop(99, 22)
     println("Greatest common denominator between 99 and 22 is " + gcd)
-  
   }
   
+  def doWhileExample() {
+    var line = ""
+    do {
+      print("prompt#> ")
+      line = readLine()
+      println("Read: " + line)
+    } while (line != "")
+  }
   
 }
 
