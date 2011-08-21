@@ -34,7 +34,7 @@ object ChecksumAccumulator {
   private val cache = Map[String, Int]()
 
   /**
-   * This is callable like ChecksumAccumulator.calculate("Ever value is an object")
+   * This is callable like ChecksumAccumulator.calculate("Every value is an object")
    */  
   def calculate(string : String) : Int =
     if (cache.contains(string))
