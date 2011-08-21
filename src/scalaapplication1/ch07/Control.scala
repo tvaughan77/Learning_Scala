@@ -19,6 +19,15 @@ class Control {
   def fileLines(file: java.io.File) = 
     scala.io.Source.fromFile(file).getLines.toList
   
+  /**
+   * This will return 2 because it explicitly specifies an overriding return value
+   */
+  def f(): Int = try { return 1 } finally { return 2 }
+  
+  /**
+   * If no exception is thrown the value computed in the finally clause (if there is one) is dropped
+   */
+  def g(): Int = try { 1 } finally { 2 }
 }
 
 object Control {
