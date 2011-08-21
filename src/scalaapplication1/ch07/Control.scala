@@ -124,5 +124,14 @@ object Control {
       if trimmed.matches(".*for.*")
     } yield trimmed.length
   }
+  
+  def matchExample(food : String) : String = {
+    food match {
+      case "salt" => "pepper"
+      case "chips" => "salsa"
+      case "eggs" => "bacon"
+      case _ => "huh?"
+    }
+  }
 }
 

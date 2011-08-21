@@ -5,6 +5,7 @@ package scalaapplication1
 //import scalaapplication1.ch06.Rational
 
 import scalaapplication1.ch07.Control
+import scalaapplication1.ch07.MultiplicationTable
 import scalaapplication1.ch07.MyFileReader
 
 object Main {
@@ -27,8 +28,10 @@ object Main {
     Control.grepWithMidStreamVariableBinding(".*gcd.*")
     val counts = Control.yieldingForLoop
     println("Counts from my yieldingForLoop is " + counts.mkString(" "))
+    val fr = MyFileReader.readFile("foobar.txt")
+   println("A good food pairing with salt is " + Control.matchExample("salt"));
     */
-   val fr = MyFileReader.readFile("foobar.txt")
+   println("My multiplication table is \n" + MultiplicationTable.multiTable)
    
     
     /* Chapter 6 
