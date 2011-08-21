@@ -71,7 +71,7 @@ class Rational(n: Int, d: Int) {
 
 object Rational {
   def playWithRationalNumbers = {
-        val r = new Rational(3, 5)
+    val r = new Rational(3, 5)
     println("Just created r = " + r)
 
     val s = new Rational(4)
