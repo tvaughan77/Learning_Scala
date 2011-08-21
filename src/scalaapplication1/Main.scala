@@ -14,10 +14,14 @@ object Main {
   def main(args: Array[String]): Unit = {
     
   
-    /* Chapter 7 */
+    /* Chapter 7 
     Control.ifExample
     Control.whileExample
     Control.doWhileExample
+    Control.forLoopOverTmpExample
+    */
+    Control.forLoopRangeExample
+    Control.forLoopRangeNoUpperBoundExample
     
     /* Chapter 6 
     Rational.playWithRationalNumbers

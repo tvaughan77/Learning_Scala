@@ -51,5 +51,21 @@ object Control {
     } while (line != "")
   }
   
+  def forLoopOverTmpExample() {
+    val filesHere = (new java.io.File("/tmp")).listFiles
+    for(file <- filesHere)
+      println(file)
+  }
+  
+  def forLoopRangeExample() {
+    for(i <- 1 to 4)
+      println("Iteration " + i)
+  }
+  
+  def forLoopRangeNoUpperBoundExample() {
+    for(i <- 1 until 4)
+      println("No upper bound Iteration " + i)
+  }
+  
 }
 
