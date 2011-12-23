@@ -120,7 +120,7 @@ object Control {
       file <- filesHere
       if file.getName.endsWith(".scala")
       line <- (new Control).fileLines(file);
-      trimmed = line.trim
+      trimmed = line.trim                      // this is a val, just with the val omitted
       if trimmed.matches(".*for.*")
     } yield trimmed.length
   }
