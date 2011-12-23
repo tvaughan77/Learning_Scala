@@ -7,6 +7,7 @@ package scalaapplication1
 import scalaapplication1.ch07.Control
 import scalaapplication1.ch07.MultiplicationTable
 import scalaapplication1.ch07.MyFileReader
+import scalaapplication1.ch07.Matches
 
 object Main {
 
@@ -33,7 +34,8 @@ object Main {
     */
    println("My multiplication table is \n" + MultiplicationTable.multiTable)
    
-    
+    Matches.foodTaste("bacon")
+    Matches.foodTaste("pork")
     /* Chapter 6 
     Rational.playWithRationalNumbers
     */
