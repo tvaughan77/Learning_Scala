@@ -3,11 +3,12 @@ package scalaapplication1
 //import scalaapplication1.ch04.ChecksumAccumulator
 //import scalaapplication1.ch05.BasicTypesAndOperations
 //import scalaapplication1.ch06.Rational
+//import scalaapplication1.ch07.Control
+//import scalaapplication1.ch07.MultiplicationTable
+//import scalaapplication1.ch07.MyFileReader
+//import scalaapplication1.ch07.Matches
 
-import scalaapplication1.ch07.Control
-import scalaapplication1.ch07.MultiplicationTable
-import scalaapplication1.ch07.MyFileReader
-import scalaapplication1.ch07.Matches
+import scalaapplication1.ch08.LongLines
 
 object Main {
 
@@ -16,7 +17,10 @@ object Main {
    */
   def main(args: Array[String]): Unit = {
     
-  
+    /*
+     * Chapter 8
+     */
+    LongLines.processFile("/tmp/foo.txt", 40)
     
     /* Chapter 7 
     Control.ifExample
