@@ -11,10 +11,12 @@ object LongLines {
     val source = Source.fromFile(filename)
     for(line <- source.getLines) 
       processLine(filename, width, line)
+    
+    def processLine(filename: String, width: Int, line: String) {
+      if(line.length > width) 
+        println(filename + ": " + line.trim)
+    }
+    
   }
   
-  def processLine(filename: String, width: Int, line: String) {
-    if(line.length > width) 
-      println(filename + ": " + line.trim)
-  }
 }
