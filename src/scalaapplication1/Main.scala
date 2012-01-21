@@ -17,6 +17,7 @@ object Main {
   def main(args: Array[String]): Unit = {
     
   
+    
     /* Chapter 7 
     Control.ifExample
     Control.whileExample
@@ -31,11 +32,13 @@ object Main {
     println("Counts from my yieldingForLoop is " + counts.mkString(" "))
     val fr = MyFileReader.readFile("foobar.txt")
    println("A good food pairing with salt is " + Control.matchExample("salt"));
-    */
    println("My multiplication table is \n" + MultiplicationTable.multiTable)
    
     Matches.foodTaste("bacon")
     Matches.foodTaste("pork")
+    */    
+
+    
     /* Chapter 6 
     Rational.playWithRationalNumbers
     */
