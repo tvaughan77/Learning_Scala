@@ -9,6 +9,9 @@ package scalaapplication1
 //import scalaapplication1.ch07.Matches
 
 import scalaapplication1.ch08.LongLines
+import scalaapplication1.ch08.FirstClassFunctions
+
+import scalaapplication1.ch20._
 
 object Main {
 
@@ -18,9 +21,34 @@ object Main {
   def main(args: Array[String]): Unit = {
     
     /*
-     * Chapter 8
+     * Chapter 20: Actors
      */
+    SillyActor.start()
+    SeriousActor.start()
+    println("I just started silly actor and serious actor")
+    
+    val echoActor = new EchoActor()
+    echoActor.start()
+    
+    echoActor ! "Hello there"
+    
+    echoActor ! "This is main, sending you another message"
+    
+    val pickyEchoActor = new IntOnlyEchoActor()
+    pickyEchoActor.start()
+    
+    pickyEchoActor ! "You're going to ignore this, aren't you?"
+    
+    pickyEchoActor ! 12   // but you won't ignore this
+    
+    
+    /*
+     * Chapter 8
+    
     LongLines.processFile("/tmp/foo.txt", 40)
+    var someFunc = FirstClassFunctions.getIncreaseFunctionLiteral
+    println("Calling someFunc(10) is " + someFunc(10))
+    */
     
     /* Chapter 7 
     Control.ifExample
