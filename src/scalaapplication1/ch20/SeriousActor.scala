@@ -10,5 +10,4 @@ object SeriousActor extends Actor {
       Thread.sleep(450)
     }
   }
-  
 }

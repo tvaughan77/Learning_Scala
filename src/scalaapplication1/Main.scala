@@ -2,12 +2,10 @@ package scalaapplication1
 
 //import scalaapplication1.ch02_03._
 //import scalaapplication1.ch04._
-//import scalaapplication1.ch05.BasicTypesAndOperations
-//import scalaapplication1.ch06.Rational
-import scalaapplication1.ch07._
-
-import scalaapplication1.ch08.LongLines
-import scalaapplication1.ch08.FirstClassFunctions
+//import scalaapplication1.ch05._
+//import scalaapplication1.ch06._
+//import scalaapplication1.ch07._
+//import scalaapplication1.ch08._
 
 import scalaapplication1.ch20._
 
@@ -20,7 +18,7 @@ object Main {
     
     /*
      * Chapter 20: Actors
-     
+     */
     SillyActor.start()
     SeriousActor.start()
     println("I just started silly actor and serious actor")
@@ -38,7 +36,7 @@ object Main {
     pickyEchoActor ! "You're going to ignore this, aren't you?"
     
     pickyEchoActor ! 12   // but you won't ignore this
-    */
+    
    
     
     /*
