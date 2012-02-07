@@ -1,7 +1,7 @@
 package scalaapplication1
 
-import scalaapplication1.ch02_03._
-//import scalaapplication1.ch04.ChecksumAccumulator
+//import scalaapplication1.ch02_03._
+//import scalaapplication1.ch04._
 //import scalaapplication1.ch05.BasicTypesAndOperations
 //import scalaapplication1.ch06.Rational
 import scalaapplication1.ch07._
@@ -49,9 +49,9 @@ object Main {
     println("Calling someFunc(10) is " + someFunc(10))
     */
     
-    /* Chapter 7 */
+    /* Chapter 7 
      scalaapplication1.ch07.Scratchpad.scratch()
-
+    */
     
     /* Chapter 6 
     Rational.playWithRationalNumbers
@@ -63,27 +63,17 @@ object Main {
     ch5.playWithRichWrappers
     */
     
-    /* Chapter 4 
-    val acc = new ChecksumAccumulator
-    val csa = new ChecksumAccumulator
-
-    println("result of calling acc.f is = " + acc.f)
-    println("result of calling acc.g is = " + acc.g)
-    println("result of calling acc.h is = " + acc.h)
+    /* Chapter 4  
+     scalaapplication1.ch04.ScratchPad.scratch()
+     */
     
-    val myString = acc.h
-    println("Calling calculate on acc.h is " + ChecksumAccumulator.calculate(myString))
+    /* Chapter 2-3 
+     scalaapplication1.ch02_03.ScratchPad.scratch()
     */
-   
-    /* Chapter 2-3 */
-      scalaapplication1.ch02_03.ScratchPad.scratch()
-    
    
     /* Chapter 1
       val greetStrings = Array("Hello", ", ", "World!")
       greetStrings.foreach(print)
       */
   }
-  
-
 }
