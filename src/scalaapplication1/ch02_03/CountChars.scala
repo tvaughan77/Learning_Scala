@@ -1,4 +1,4 @@
-package scalaapplication1
+package scalaapplication1.ch02_03
 
 import scala.io.Source
 
